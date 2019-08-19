@@ -1,0 +1,39 @@
+<app-manage-client [currentClient]="currentClient" ></app-manage-client>
+
+<div class="clients">
+  <div *ngIf="clients.length > 0">
+      
+
+      <div class="clients_header">
+        <h1>Clients</h1>
+        <input type="button" value="New Client">
+      </div>
+
+      <div class="clients_container">
+
+      <div class="headers">
+        <div class="headers_container">
+          <h4>Client</h4>
+          <h4>Service</h4>
+          <h4>Owes</h4>
+        </div>
+      </div>
+
+      <div *ngFor="let client of clients" class="client_row">
+        <h3>{{client.firstname}} {{client.lastname}}</h3>
+
+        <p>{{client.service}}</p>
+    
+        <p>${{client.balance}}</p>
+    
+        <div class="manage">
+          <input (click)="manageClient(client)" type="button" value="Manage">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="clients.length == 0">
+    <h1 class="noLength">You Have No Clients</h1>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div id="manage_client" class="manage_client">
+    <div class="manage_client_container">
+      <div class="manage_client_header">
+        <h1 (click)="closeMenu()" class="close"><i class="fa fa-times"></i></h1>
+
+        <div>
+          <h1>{{currentClient.firstname}}'s Profile</h1>
+        </div>
+        
+        <input type="button" value="Edit" class="update">
+
+        <input type="button" value="Remove" class="remove">
+      </div>
+  
+      <div class="manage_client_body">
+        <div class="basic_info_section">
+          <div class="client_info_item">
+            <p class="label">Email</p>
+            <p>{{currentClient.email}}</p>
+          </div>
+
+          <div class="client_info_item">
+            <p class="label">Phone</p>
+            <p>{{currentClient.phone}}</p>
+          </div>
+
+          <div class="client_info_item">
+            <p class="label">Service</p>
+            <p>{{currentClient.service}}</p>
+          </div>
+
+          <div class="client_info_item">
+            <p class="label">Still Owed</p>
+            <p>{{currentClient.balance}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
